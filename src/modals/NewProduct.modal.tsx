@@ -5,11 +5,7 @@ import {
   IIconProps,
   Modal,
   PrimaryButton,
-  Spinner,
-  SpinnerSize,
-  Text,
   TextField,
-  TooltipHost,
 } from "@fluentui/react";
 import { IProduct } from "types";
 import * as Yup from "yup";

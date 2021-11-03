@@ -1,5 +1,5 @@
 
-import { createTheme, loadTheme } from '@fluentui/react';
+import { createTheme } from '@fluentui/react';
 
 export const blackAndWhiteTheme = createTheme({
   palette: {

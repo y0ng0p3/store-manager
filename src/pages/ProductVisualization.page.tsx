@@ -1,6 +1,6 @@
 import { ScatterPlotComponent } from 'components'
 import { PieChartComponent } from 'components/PieChart.component'
-import React, { useState, } from 'react'
+import React from 'react'
 import { useProductStore } from 'stores'
 
 export interface IProductVisualizationProps {

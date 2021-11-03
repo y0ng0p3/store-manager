@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ProductItemComponent, NewProductComponent } from "components";
 import { useProductStore } from "stores";
 export interface IProductListingProps {}

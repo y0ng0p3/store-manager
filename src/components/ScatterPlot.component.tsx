@@ -6,7 +6,7 @@ export interface IScatterPlotProps {
   
 }
 
-export const ScatterPlotComponent: React.FC<IScatterPlotProps> = (props) => {
+export const ScatterPlotComponent: React.FC<IScatterPlotProps> = () => {
   const { products } = useProductStore()
 
   const maxPrice = d3.max(products, (d) => d.price!);
@@ -25,7 +25,6 @@ export const ScatterPlotComponent: React.FC<IScatterPlotProps> = (props) => {
       "#" + Math.floor(Math.random() * 16777215).toString(16),
     ];
   }
-  const color = d3.scaleOrdinal().range(randomColors);
 
   const drawGraph = () => {
     const svg = d3

@@ -1,5 +1,5 @@
-import React, { useState, } from 'react'
-import { IIconProps, Text, TooltipHost } from '@fluentui/react'
+import React from 'react'
+import { Text, TooltipHost } from '@fluentui/react'
 import { NewProductModal } from 'modals'
 
 export interface INewProductProps {
@@ -7,9 +7,6 @@ export interface INewProductProps {
 }
 
 export const NewProductComponent: React.FC<INewProductProps> = () => {
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-  const cancelIcon: IIconProps = { iconName: 'Cancel' };
-
 
   return (
     <>
