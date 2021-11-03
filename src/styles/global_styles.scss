@@ -1,0 +1,20 @@
+@import './base/vars';
+@import './base/media_query';
+@import './base/layout';
+@import './base/mixins';
+@import './base/utilities';
+
+//components
+@import './components/Header.component';
+@import './components/modal.component';
+@import './components/_PieChart.component';
+
+//pages.
+@import './pages/AppEntry.page';
+@import './pages/ProductListing.page';
+@import './pages/_ProductVisualization.page';
+
+body{
+  background-color: var(--bg-color);
+  padding: 16px;
+}
