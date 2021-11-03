@@ -1,8 +1,6 @@
-import React, { ReactNode, useState, } from 'react'
+import React, { ReactNode, } from 'react'
 import { Dialog, DialogType, DialogFooter } from '@fluentui/react';
 import { PrimaryButton, DefaultButton } from '@fluentui/react';
-import { hiddenContentStyle, mergeStyles } from '@fluentui/react';
-import { Toggle } from '@fluentui/react';
 import { ContextualMenu } from '@fluentui/react';
 import { useId, useBoolean } from '@fluentui/react-hooks';
 
@@ -26,7 +24,6 @@ const dragOptions = {
   menu: ContextualMenu,
   keepInBounds: true,
 };
-const screenReaderOnly = mergeStyles(hiddenContentStyle);
 
 
 export const ConfirmActionDialog: React.FC<IConfirmActionProps> = ({
@@ -37,11 +34,9 @@ export const ConfirmActionDialog: React.FC<IConfirmActionProps> = ({
   message = '',
   negativeText = "Annuler",
   positiveText = "shared:proceed",
-  onPositive,
-  ...props
-}) => {
+  onPositive}) => {
   const [hideDialog, { toggle: toggleHideDialog }] = useBoolean(true);
-  const [isDraggable, { toggle: toggleIsDraggable }] = useBoolean(false);
+  const [isDraggable] = useBoolean(false);
   const labelId: string = useId('dialogLabel');
   const subTextId: string = useId('subTextLabel');
 
