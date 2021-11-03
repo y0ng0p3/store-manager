@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { blackAndWhiteTheme } from './theme';
+import { initializeIcons, loadTheme } from '@fluentui/react';
+import { BrowserRouter } from 'react-router-dom';
+
+loadTheme(blackAndWhiteTheme)
+initializeIcons()
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
